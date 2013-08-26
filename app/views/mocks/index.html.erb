@@ -1,0 +1,27 @@
+<h1>Listing mocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mocks.each do |mock| %>
+      <tr>
+        <td><%= mock.word %></td>
+        <td><%= link_to 'Show', mock %></td>
+        <td><%= link_to 'Edit', edit_mock_path(mock) %></td>
+        <td><%= link_to 'Destroy', mock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mock', new_mock_path %>

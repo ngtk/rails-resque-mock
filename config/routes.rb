@@ -1,4 +1,6 @@
 RailsResqueMock::Application.routes.draw do
+  resources :mocks
+
   get 'hello/:text', :to => 'hello#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
