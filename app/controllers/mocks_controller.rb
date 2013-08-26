@@ -25,7 +25,6 @@ class MocksController < ApplicationController
   # POST /mocks.json
   def create
     @mock = Mock.new(mock_params)
-
     respond_to do |format|
       if @mock.save
         format.html { redirect_to @mock, notice: 'Mock was successfully created.' }
